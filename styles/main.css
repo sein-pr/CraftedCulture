@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 :root {
-
-    /* Ligh Mode colors */
+    /* Light Mode colors */
     --text: #040316;
     --background: #e3e3e8;
     --primary: #44baff;
@@ -18,55 +17,542 @@
 }
 
 * {
-    margin: 16px;
-    padding: 0;
+    
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: var(--background);
-}
-/* Navigation stylying starts here */
-header{
-    background-color: var(--secondary);
-    border-radius: 10px;
+body {
+    background-color: white;
+    margin: 25px ;
 }
 
-.navbar{
+.navbar {
     display: flex;
+    /* position: relative; */
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 16px auto;
     padding: 0 20px;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 2rem 9%; */
+    background: lightgray;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 .logo img {
-    height: 50px;
+    height: 35px;
     width: auto;
 }
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allows the search bar to grow and occupy available space */
+    max-width: 500px; /* Limit the maximum width of the search bar */
+    margin: 16px 25px;
+    background-color: var(--background);
+    border-radius: 5px;
+}
+
+
+.search-bar i {
+    position: absolute;
+    left: 10px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 16px;
+    padding: 10px 10px 10px 30px; /* Add padding to leave space for the icon */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.search-bar input::placeholder {
+    color: var(--text);
+}
+
+.search-bar:hover{
+    border:1px solid var(--secondary);
+}
+
 
 .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    align-items: center;
     display: flex;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; 
+}
+
+.nav-links a i {
+    font-size: 30px; /* Adjust the size as needed */
+    color: var(--text); /* Maintain the same color scheme */
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    /* padding: 5px 10px; */
     transition: color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
 }
+
+.icon-label {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 4px;
+    text-align: center;
+}
+
+.nav-links a:hover i {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
+
 
 .nav-links a:hover {
     color: var(--primary);
 }
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ffea00; /* Yellow background */
+    color: #333; /* Text color */
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-badge:hover{
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
+.nav-links a:hover i {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
+.login-btn{
+    height: 30px;
+    width: 30px;
+    border: 2px solid lightgray;
+    margin-bottom: 16px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.login-btn:hover{
+    transform: scale(1.1);
+    border:2px solid var(--accent);
+    
+}
+
+/* Profile Dropdown Menu Styles */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(255, 255, 255, 1.0);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    z-index: 1000;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.profile-dropdown .dropdown-menu li {
+    padding: 0;
+}
+
+.profile-dropdown .dropdown-menu li a {
+    display: flex;
+    align-items: start;
+    padding: 10px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-align: right;
+}
+
+.profile-dropdown .dropdown-menu li a i {
+    margin-right: 12px; /* Adds space between the icon and the text */
+    font-size: 16px;    /* Adjust the icon size */
+    color: var(--primary);
+    flex-shrink: 0;     /* Prevents icon from shrinking */
+}
+
+.profile-dropdown .dropdown-menu li a:hover {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.profile-dropdown .dropdown-menu li a:hover i {
+    color: #fff;
+}
+
+
+
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: flex;
+}
+
+.nav-items li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px; 
+}
+
+.nav-items a {
+    text-decoration: none;
+    /* color: var(--text-dark); */
+    font-weight: 500;
+    transition: color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-items a:hover{
+    color: var(--accent-dark);
+}
+
+/* Modal styling starts here */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 450px;
+    height: 510px;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Ensure modal content is positioned correctly */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.close-btn:hover {
+    color: var(--primary);
+}
+
+.form-container {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.form-panel {
+    min-width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.form-panel-login {
+    z-index: 2;
+    position: relative;
+}
+
+.form-panel-register {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform: translateX(100%);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.input-box {
+    position: relative;
+    width: 93%;
+    height: 35px;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    caret-color: var(--primary);
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.remember-forgot label {
+    color: #fff;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+}
+
+.social-btn {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.social-btn:hover {
+    background-color: var(--primary);
+}
+
+.register-link {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.show-register .form-panel-login {
+    transform: translateX(-100%);
+}
+
+.show-register .form-panel-register {
+    transform: translateX(0%);
+}
+
+
+/* main styling */
+.hero-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-container span{
+    color: var(--primary);
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+.home-content h1 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+
+.name{
+    background: #040316;
+    width: 100%;
+    height: 400px;
+    background: rgba(120,107,3,1)
+
+
+}
+
+.slide-image {
+    position: relative;
+    display: inline-block; /* Ensures that the social icons are relative to the image */
+    width: 100%;
+    height: 400px;
+    /* align-items: center; */
+
+}
+
+.slide-image img {
+    
+    width: 35vw;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.social ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social ul li {
+    margin-bottom: 15px;
+}
+
+.social ul li a {
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    /* border: .2rem solid var(--primary); */
+    font-size: 2rem;
+    color: var(--primary);
+    transition: .5s ease;
+
+}
+
+.social ul li a:hover {
+    color: var(--accent); 
+    
+}
+
+.hero-container .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--primary);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--primary);
+    font-size: 1.6rem;
+    width: 50%;
+    color: var(--text);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn:hover {
+    box-shadow: none;
+}
+  

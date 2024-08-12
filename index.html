@@ -1,26 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/assets/img/logo.png" type="image/x-icon">
-    <title>CraftedCulture| Honoring Our Culture</title>
+    <title>CraftedCulture | Honoring Our Culture</title>
 </head>
+
 <body>
-    <Header>
+    <header>
         <nav class="navbar">
             <a href="#" class="logo">
                 <img src="assets/img/logo.png" alt="CraftedCulture Logo">
             </a>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search..." />
+            </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Others</a></li>
-                <li><a href="#">Others2</a></li>
-                <li><a href="#">Others3</a></li>
-                <li><a href="#">Other4</a></li>
+                <li style="position: relative;">
+                    <a href="#" id="cartIcon">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="icon-label">Cart</span>
+                    </a>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <span class="icon-label">Favorites</span>
+                    </a>
+                </li>
+                <li class="profile-dropdown" style="position: relative;">
+                    <a href="#" class="profile-link">
+                        <img src="/assets/img/logo.png" alt="profile" id="openLoginModal" class="login-btn">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa-solid fa-user"></i> Manage Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-box"></i> Order History</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
-    </Header>
+        <nav class="navbar-left">
+            <ul class="nav-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <!-- Main content goes here -->
+        <section class="hero-container">
+            <div class="home-content">
+                <h1>Crafted Culture</h1>
+                <h3>Preserving our <span>Cultural Heritage</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Sapiente consectetur, aliquam quisquam quis voluptas reiciendis culpa ipsum nesciunt, 
+                    quasi suscipit ea enim assumenda dignissimos amet et esse tempore nemo totam.
+                </p>
+                <a href="#" class="btn">Shop now</a>
+            </div>
+            <div class="slide-image">
+                <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+                <img src="/assets/img/animals.png" alt="hero" class="img">
+            </div>
+            
+        </section>
+
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officia aperiam cupiditate, tempore quod voluptatum reprehenderit dolorum sint incidunt mollitia facilis at consequuntur hic sunt veniam eaque eligendi deleniti accusantium.</span><span>Id omnis quae vitae enim dolorum commodi! Dolore impedit quaerat minima? Similique numquam ad distinctio atque optio corrupti corporis maxime harum adipisci, amet, ut saepe consequuntur fuga, modi rem. Quas!</span><span>Harum illo delectus sed culpa eius impedit eos corporis illum provident pariatur deleniti quis fugit accusantium explicabo repellat fugiat incidunt dolores modi dolorum rem, nobis quibusdam autem esse? Exercitationem, fuga!</span></p>
+        <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis perspiciatis animi aspernatur soluta eos voluptate tempora hic fuga natus accusantium, voluptas ullam voluptatem quos recusandae molestiae repellat odit reiciendis vel.</span><span>Eum distinctio non corrupti officiis, eaque dolor neque. Ex, expedita. Voluptatum expedita facilis quibusdam atque aliquam culpa eius perferendis rem? Veniam consequatur accusantium voluptas tenetur aspernatur nostrum eos eaque quam!</span><span>Modi, ratione! Praesentium minus sit, aliquam provident quasi ipsum et adipisci quisquam necessitatibus consectetur dolorum saepe in, voluptates quis. Commodi laudantium pariatur quos quae, accusantium rerum aspernatur optio maxime dolore?</span></p>
+        <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus ab expedita ratione sed possimus, minus vel eius qui, dolorum saepe placeat sint. Optio doloremque hic quibusdam a! Aliquid, explicabo beatae?</span><span>Error sed ad iusto numquam exercitationem in, ratione consequatur consectetur, autem harum voluptatibus deserunt excepturi nisi! Laudantium consectetur ut porro voluptate eaque veniam dolores laborum, unde minus maiores sint neque.</span><span>Deserunt quod recusandae hic minus ea quidem dolorem ipsa corporis, rem velit consequuntur consectetur, officiis ut autem labore culpa eaque repellendus facere dicta rerum ipsum harum. Suscipit laborum beatae quos.</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, sapiente architecto. Voluptatem culpa rem, fugiat alias obcaecati minima accusantium quaerat, aperiam odio, repellendus consequatur similique maiores nihil amet reprehenderit porro.</span><span>Assumenda quaerat voluptatum odit repellendus animi. Odit commodi dicta quae soluta corrupti odio facilis quis quo exercitationem eveniet laboriosam nemo rem vitae doloremque temporibus, quas veritatis enim autem nisi provident?</span><span>Expedita, voluptates delectus dignissimos eveniet ipsum harum? Obcaecati a soluta ex, quaerat ea vitae cumque veniam tenetur magni vero in eligendi pariatur sapiente quidem? Similique numquam vitae pariatur suscipit incidunt?</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis modi ducimus voluptas vel quo perferendis, facere, nihil voluptates libero officiis nostrum est repellendus natus debitis quisquam molestiae fugit asperiores itaque.</span><span>Tempore, porro quos nostrum vero fugit non optio aspernatur amet soluta inventore explicabo, accusamus veniam cum, iusto quaerat dolore autem nam alias debitis sed dolor voluptatum hic dolorum provident. Vel.</span><span>Tempore quisquam architecto veritatis vitae dignissimos, eaque ut ipsa aliquam perspiciatis distinctio accusantium beatae dolorum voluptatem incidunt? Molestiae repellendus amet, nihil, eaque pariatur aut blanditiis odio dicta cum tenetur nisi?</span></p>
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn"><i class='bx bx-x'></i></button> <!-- Close button -->
+            <div class="form-container" id="formContainer">
+                <div class="form-panel form-panel-login">
+                    <form action="">
+                        <h1>Login</h1>
+                        <div class="input-box">
+                            <input type="text" placeholder="Username" required />
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" required />
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" /> Remember me</label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn social-btn">Login with Google</button>
+                        <button type="button" class="btn social-btn">Login with Facebook</button>
+                        <div class="register-link">
+                            <p>Don't have an account? <a href="#" id="showRegister">Register here!</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-panel form-panel-register">
+                    <form action="">
+                        <h1>Register</h1>
+                        <div class="input-box">
+                            <input type="text" placeholder="Username" required />
+                        </div>
+                        <div class="input-box">
+                            <input type="email" placeholder="Email" required />
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" required />
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <button type="button" class="btn social-btn">Register with Google</button>
+                        <button type="button" class="btn social-btn">Register with Facebook</button>
+                        <div class="register-link">
+                            <p>Already have an account? <a href="#" id="showLogin">Login here!</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/b9eb99af91.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
