@@ -42,4 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdownMenu.classList.remove('show');
         }
     });
+
+    var swiper = new Swiper('.mySwiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000, // Change this value to adjust the interval
+            disableOnInteraction: false,
+        },
+    });
 });
